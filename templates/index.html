@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XCEL AI Learning Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Main Navigation -->
+    <header class="main-header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Logo -->
+          <div class="logo">
+            <i data-lucide="brain" class="logo-icon"></i>
+            <span class="logo-text">XCEL AI Learning Platform</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="desktop-nav">
+            <a href="#" class="nav-item active" data-page="home">
+              <i data-lucide="home" class="nav-icon"></i>
+              <span>Home</span>
+            </a>
+            <a href="{{ url_for('about') }}" class="nav-item" data-page="about">
+              <i data-lucide="book-open" class="nav-icon"></i>
+              <span>About</span>
+            </a>
+            <a href="#" class="nav-item" data-page="members">
+              <i data-lucide="users" class="nav-icon"></i>
+              <span>Members</span>
+            </a>
+          </nav>
+
+          <!-- User Actions -->
+          <div class="user-actions">
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('profile') }}" class="nav-item" data-page="profile">
+              <i data-lucide="user" class="nav-icon"></i>
+              <span>Profile</span>
+            </a>
+            <a href="{{ url_for('logout') }}" class="logout-btn">
+              <i data-lucide="log-out" class="nav-icon"></i>
+              <span>Logout</span>
+            </a>
+            {% else %}
+            <a href="{{ url_for('login') }}" class="login-btn">
+              <i data-lucide="log-in" class="nav-icon"></i>
+              <span>Login</span>
+            </a>
+            {% endif %}
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn">
+            <i data-lucide="menu" class="menu-icon"></i>
+            <i data-lucide="x" class="close-icon hidden"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav hidden">
+        <div class="mobile-nav-content">
+          <a href="#" class="mobile-nav-item active" data-page="home">
+            <i data-lucide="home" class="nav-icon"></i>
+            <span>Home</span>
+          </a>
+          <a href="{{ url_for('about') }}" class="moblie-nav-item" data-page="about">
+            <i data-lucide="book-open" class="nav-icon"></i>
+            <span>About</span>
+          </a>
+          <a href="#" class="mobile-nav-item" data-page="members">
+            <i data-lucide="users" class="nav-icon"></i>
+            <span>Members</span>
+          </a>
+          {% if current_user.is_authenticated %}
+          <a href="{{ url_for('profile') }}" class="mobile-nav-item" data-page="profile">
+            <i data-lucide="user" class="nav-icon"></i>
+            <span>Profile</span>
+          </a>
+          <a href="{{ url_for('logout') }}" class="mobile-nav-item">
+            <i data-lucide="log-out" class="nav-icon"></i>
+            <span>Logout</span>
+          </a>
+        {% else %}
+          <a href="{{ url_for('login') }}" class="mobile-login-btn">
+            <i data-lucide="log-in" class="nav-icon"></i>
+            <span>Login</span>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <!-- Left Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <i data-lucide="layout-dashboard" class="sidebar-header-icon"></i>
+          <span>Navigation</span>
+          <button class="sidebar-toggle">
+            <i data-lucide="chevron-left"></i>
+          </button>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#" class="sidebar-nav-item active" data-section="dashboard">
+            <i data-lucide="layout-dashboard" class="sidebar-nav-icon"></i>
+            <span class="sidebar-nav-text">Dashboard</span>
+          </a>
+          <a href="#" class="sidebar-nav-item" data-section="courses">
+            <i data-lucide="book-open" class="sidebar-nav-icon"></i>
+            <span class="sidebar-nav-text">Courses</span>
+          </a>
+          <a href="#" class="sidebar-nav-item" data-section="assignments">
+            <i data-lucide="file-check" class="sidebar-nav-icon"></i>
+            <span class="sidebar-nav-text">Assignments & Quizzes</span>
+          </a>
+          <a href="#" class="sidebar-nav-item" data-section="resources">
+            <i data-lucide="lightbulb" class="sidebar-nav-icon"></i>
+            <span class="sidebar-nav-text">Resources</span>
+          </a>
+          <a href="#" class="sidebar-nav-item" data-section="certifications">
+            <i data-lucide="award" class="sidebar-nav-icon"></i>
+            <span class="sidebar-nav-text">Certifications</span>
+          </a>
+        </nav>
+      </aside>
+
+
+<main class="content">
+  <div class="page-header">
+    <h1 id="page-title">Dashboard</h1>
+  </div>
+  <div class="page-content">
+    <div class="empty-state">
+      <i data-lucide="brain" class="empty-icon"></i>
+      <h2>XCEL AI Learning Platform</h2>
+    </div>
+  </div>
+</main>
+</div>
+</div>
+  <script src="static/js/script.js"></script>
+</body>
+</html>

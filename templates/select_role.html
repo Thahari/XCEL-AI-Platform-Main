@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Selection</title>
+</head>
+<style>
+    /* General styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #8cec8c, #57df5c);
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    max-width: 500px;
+    width: 90%;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Header styling */
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Roles container styling */
+.roles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+/* Individual role styling */
+.role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: linear-gradient(135deg, #ffffff, #e8f5e9);
+    width: 45%;
+}
+
+.role:hover {
+    background: linear-gradient(135deg, #e0ffe0, #b2fab4);
+}
+
+.role.selected {
+    border-color: #4CAF50;
+    color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Icon styling */
+.role i {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.role span {
+    font-size: 1.2em;
+}
+
+/* Submit button styling */
+.continue-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    font-size: 1.2em;
+    box-shadow: 0 4px #999;
+}
+
+.continue-btn:hover {
+    background-color: #45a049;
+}
+
+.continue-btn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .roles {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .role {
+        width: 80%;
+    }
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Please select your role</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="roles">
+            <div class="role selected">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin</span>
+            </div>
+            <div class="role">
+                <i class="fas fa-user-graduate"></i>
+                <span>Student</span>
+            </div>
+        </div>
+        <button class="continue-btn">Submit</button>
+    </div>
+</body>
+</html>

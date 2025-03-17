@@ -1,0 +1,125 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Outer background: Light green shade */
+    background: #90EE90;
+    overflow-x: hidden;
+    }
+    header {
+    text-align: center;
+    padding: 3em 1em 1em;
+    animation: fadeInDown 1s ease-in-out both;
+    /* Header text color can remain as default or be adjusted */
+    color: #006400;
+    }
+    @keyframes fadeInDown {
+    from {
+    opacity: 0;
+    transform: translateY(-20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+    header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+    }
+    header p {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    }
+    .edit-btn {
+    display: inline-block;
+    background: rgba(0, 100, 0, 0.2);
+    color: #006400;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+    }
+    .edit-btn:hover {
+    background: rgba(0, 100, 0, 0.4);
+    transform: scale(1.05);
+    }
+    .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2em auto;
+    /* White box */
+    background: #fff;
+    border-radius: 15px;
+    padding: 2em;
+    /* Ensure text inside is green */
+    color: #006400;
+    /* Optional shadow and subtle effect */
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    animation: fadeInUp 1s ease-in-out both;
+    }
+    @keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+    .profile-pic {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1em;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #006400;
+    }
+    .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    .bio {
+    text-align: center;
+    margin-bottom: 2em;
+    }
+    .bio p {
+    line-height: 1.6;
+    }
+    .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    }
+    .skills li {
+    /* Use a light green background in the skill list with text in green */
+    background: rgba(0, 100, 0, 0.1);
+    padding: 0.8em 1.2em;
+    border-radius: 30px;
+    transition: background 0.3s;
+    font-size: 1em;
+    }
+    .skills li:hover {
+    background: rgba(0, 100, 0, 0.2);
+    }
+    footer {
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(0, 100, 0, 0.3);
+    color: #006400;
+    }
